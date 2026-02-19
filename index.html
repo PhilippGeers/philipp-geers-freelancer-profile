@@ -126,6 +126,12 @@
             font-size: 1.25rem;
             font-weight: 400;
             color: rgba(255,255,255,0.9);
+            margin-bottom: 0.75rem;
+        }
+
+        .hero-credentials {
+            font-size: 0.95rem;
+            color: rgba(255,255,255,0.65);
             margin-bottom: 1rem;
         }
 
@@ -473,7 +479,7 @@
             <span>Philipp Geers</span>
         </a>
         <div class="nav-links">
-            <a href="#situationen">Situationen</a>
+            <a href="#leistungen">Leistungen</a>
             <a href="#prinzipien">Prinzipien</a>
             <a href="#referenzen">Referenzen</a>
             <a href="#kontakt">Kontakt</a>
@@ -487,6 +493,7 @@
             <img src="profilepic.png" alt="Philipp Geers" class="profile-image">
             <h1>Philipp Geers</h1>
             <h2>Cloud-Architektur, Modernisierung und AI-Integration</h2>
+            <p class="hero-credentials">Full-Stack-Entwicklung mit Java, Kotlin und TypeScript. Spezialisiert auf Cloud-Architektur, DDD und Security by Design.</p>
             <div class="contact-info">
                 <a href="mailto:mail@philipp-geers.de">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -505,16 +512,21 @@
             </div>
         </div>
         <div class="hero-right">
-            <h3>Probleme verstehen. Lösungen entwerfen. Ergebnisse liefern.</h3>
-            <p class="hero-text">Neue Plattformen entwickeln, bestehende Systeme modernisieren oder AI-Services integrieren. Von der Fachlichkeit bis zur tragfähigen Architektur.</p>
+            <h3>Probleme verstehen. Lösungen entwerfen. Teams stärken.</h3>
+            <p class="hero-text">Neue Plattformen entwickeln, bestehende Systeme modernisieren oder AI-Services integrieren. Von der Fachlichkeit bis zur tragfähigen Architektur, mit Wissenstransfer an Ihr Team.</p>
             <a href="mailto:mail@philipp-geers.de?subject=Terminanfrage" class="cta-button">Termin vereinbaren</a>
         </div>
     </div>
 </header>
 
-<section id="situationen" class="section">
-    <h2 class="section-title">Typische Situationen</h2>
+<section id="leistungen" class="section">
+    <h2 class="section-title">Leistungen</h2>
     <div class="expertise-grid">
+        <div class="expertise-card">
+            <h4>Fachlichkeit in Architektur übersetzen</h4>
+            <p>Die Software bildet die Fachlichkeit nicht richtig ab. Begriffe sind unklar, Zuständigkeiten im Code vermischt, jede Änderung hat unerwartete Seiteneffekte.</p>
+            <p>Mit Event Storming und Domain-Driven Design erarbeite ich zusammen mit Ihrem Team eine Architektur, die zur Fachlichkeit passt. Ihr Team lernt die Methodik dabei mit.</p>
+        </div>
         <div class="expertise-card">
             <h4>Neue Cloud-Lösung aufbauen</h4>
             <p>Das nächste Produkt soll cloud-native laufen oder ein bestehendes System muss in die Cloud. Intern fehlt die Erfahrung, eine Cloud-Architektur von Grund auf aufzusetzen.</p>
@@ -522,14 +534,9 @@
             <span class="badge">AWS Certified Solutions Architect</span>
         </div>
         <div class="expertise-card">
-            <h4>Fachlichkeit in Architektur übersetzen</h4>
-            <p>Die Software bildet die Fachlichkeit nicht richtig ab. Begriffe sind unklar, Zuständigkeiten im Code vermischt, jede Änderung hat unerwartete Seiteneffekte.</p>
-            <p>Mit Event Storming und Domain-Driven Design erarbeite ich zusammen mit Ihrem Team eine Architektur, die zur Fachlichkeit passt.</p>
-        </div>
-        <div class="expertise-card">
             <h4>Bestehendes System modernisieren</h4>
-            <p>Das System läuft, aber es bremst. Veraltete Infrastruktur, fehlende Automatisierung, jedes Deployment ein Risiko.</p>
-            <p>Ich analysiere den Ist-Zustand, plane den Umbau und setze ihn schrittweise um, ohne den laufenden Betrieb zu unterbrechen.</p>
+            <p>Legacy-Codebase, gewachsene Architektur, technische Schulden die jedes Feature ausbremsen. Fehlende Automatisierung, jedes Deployment ein Risiko.</p>
+            <p>Ich analysiere den Ist-Zustand, plane den Umbau und setze ihn schrittweise mit Ihrem Team um. Das Know-how bleibt im Haus.</p>
         </div>
         <div class="expertise-card">
             <h4>AI in bestehende Systeme bringen</h4>
@@ -560,21 +567,21 @@
         </div>
         <div class="expertise-card">
             <svg class="card-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
-                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-            </svg>
-            <h4>Verantwortung</h4>
-            <p>Wenn ich ein Thema übernehme, trage ich die Verantwortung dafür. Jeder Schritt transparent und dokumentiert.</p>
-        </div>
-        <div class="expertise-card">
-            <svg class="card-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                 <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
                 <circle cx="9" cy="7" r="4"></circle>
                 <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
                 <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
             </svg>
-            <h4>Auf Augenhöhe</h4>
-            <p>Ich arbeite mit Entscheidern, die Ziele definieren und Zugang zu den relevanten Systemen ermöglichen.</p>
+            <h4>Hands-on und verantwortlich</h4>
+            <p>Ich arbeite direkt im Team, nah am Code und an den Entscheidern. Wenn ich ein Thema übernehme, trage ich die Verantwortung dafür.</p>
+        </div>
+        <div class="expertise-card">
+            <svg class="card-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"></path>
+                <line x1="4" y1="22" x2="4" y2="15"></line>
+            </svg>
+            <h4>Wissenstransfer</h4>
+            <p>Mein Ziel ist, dass Ihr Team nach dem Projekt eigenständig weiterarbeiten kann. Ich gebe mein Know-how aktiv weiter, damit die Ergebnisse nachhaltig sind.</p>
         </div>
     </div>
 </section>
