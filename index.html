@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Philipp Geers - Senior Softwarearchitekt</title>
+    <title>Philipp Geers. Cloud-Architektur, AI-Integration und Modernisierung</title>
+    <meta name="description" content="Philipp Geers. IT-Dienstleister für Cloud-Architektur, AI-Integration und Modernisierung. Von der Fachlichkeit bis zur passenden Architektur. Direkte Zusammenarbeit mit Tech-Entscheidern.">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="favicon.png">
     <style>
@@ -129,37 +130,35 @@
         }
 
         .hero-right h3 {
-            font-size: 1.5rem;
+            font-size: 1.75rem;
             margin-bottom: 1.5rem;
             color: var(--secondary-color);
+            line-height: 1.3;
         }
 
-        .leistungen-list {
-            list-style: none;
-            margin-bottom: 1.5rem;
-        }
-
-        .leistungen-list li {
-            margin-bottom: 1rem;
-            padding-left: 1.5rem;
-            position: relative;
+        .hero-text {
+            color: rgba(255,255,255,0.9);
             font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
         }
 
-        .leistungen-list li::before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: var(--secondary-color);
-        }
-
-        .leistungen-list li strong {
+        .cta-button {
+            display: inline-block;
+            background: var(--secondary-color);
             color: white;
+            padding: 0.85rem 2rem;
+            border-radius: var(--border-radius);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-top: 1rem;
+            transition: background 0.3s, transform 0.3s;
         }
 
-        .leistungen-list li span {
-            color: rgba(255,255,255,0.8);
-            font-size: 0.95rem;
+        .cta-button:hover {
+            background: #357abd;
+            transform: translateY(-2px);
         }
 
         .contact-info {
@@ -167,6 +166,7 @@
             flex-wrap: wrap;
             gap: 1.5rem;
             margin-top: 1.5rem;
+            justify-content: center;
         }
 
         .contact-info a, .contact-info span {
@@ -178,14 +178,14 @@
         }
 
         .section {
-            padding: 5rem 2rem;
-            max-width: 1200px;
+            padding: 4rem 2rem;
+            max-width: 1100px;
             margin: 0 auto;
         }
 
         .section-title {
-            font-size: 2rem;
-            margin-bottom: 3rem;
+            font-size: 1.75rem;
+            margin-bottom: 2rem;
             text-align: center;
             position: relative;
         }
@@ -193,52 +193,56 @@
         .section-title::after {
             content: '';
             display: block;
-            width: 50px;
+            width: 40px;
             height: 3px;
             background: var(--secondary-color);
-            margin: 1rem auto;
+            margin: 0.75rem auto;
         }
 
         .expertise-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
         }
 
         .expertise-card {
             background: white;
-            padding: 2rem;
+            border: 1px solid #e2e8f0;
+            padding: 1.5rem;
             border-radius: var(--border-radius);
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            transition: transform 0.3s;
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
         .expertise-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
-        .expertise-card h3 {
+        .expertise-card h4 {
             color: var(--secondary-color);
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 1.05rem;
         }
 
-        .expertise-card ul {
-            list-style: none;
+        .expertise-card p {
+            color: var(--text-color);
+            font-size: 0.9rem;
+            line-height: 1.65;
+            margin-bottom: 0.75rem;
         }
 
-        .expertise-card li {
-            margin-bottom: 0.5rem;
-            padding-left: 1.5rem;
-            position: relative;
+        .expertise-card p:last-child {
+            margin-bottom: 0;
         }
 
-        .expertise-card li::before {
-            content: "→";
-            position: absolute;
-            left: 0;
-            color: var(--secondary-color);
+        .expertise-card .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #f6ad55, #ed8936);
+            color: white;
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-size: 0.7rem;
+            font-weight: 600;
         }
 
         .skills-grid {
@@ -256,31 +260,38 @@
 
         .skill-category h3 {
             color: var(--secondary-color);
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.25rem;
         }
 
-        .skill-list {
-            columns: 2;
-            list-style: none;
+        .skill-category p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: var(--text-color);
         }
 
-        .skill-list li {
+        .expertise-card svg.card-icon {
+            color: var(--secondary-color);
             margin-bottom: 0.75rem;
-            break-inside: avoid;
         }
 
         .projects {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
         }
 
         .project-card {
             background: white;
+            border: 1px solid #e2e8f0;
             border-radius: var(--border-radius);
             overflow: hidden;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
         .project-content {
@@ -289,21 +300,44 @@
 
         .project-title {
             color: var(--primary-color);
+            margin-bottom: 0.25rem;
+            font-size: 1.15rem;
+        }
+
+        .project-industry {
+            color: var(--secondary-color);
+            font-size: 0.85rem;
+            font-weight: 500;
             margin-bottom: 1rem;
-            font-size: 1.5rem;
         }
 
         .project-description {
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-description p {
+            font-size: 0.9rem;
+            line-height: 1.65;
+            color: var(--text-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .referenz-label {
+            font-weight: 600;
+            color: var(--secondary-color);
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-top: 0.75rem;
+            margin-bottom: 0.15rem;
+        }
+
+        .referenz-label:first-child {
+            margin-top: 0;
         }
 
         .technologies-used {
-            margin-top: 1rem;
-        }
-
-        .technologies-used h4 {
-            margin-bottom: 0.5rem;
-            color: var(--secondary-color);
+            margin-top: 0.75rem;
         }
 
         .tech-list {
@@ -319,12 +353,73 @@
             font-size: 0.875rem;
         }
 
+        .cta-section {
+            background: linear-gradient(135deg, var(--primary-color), #1a202c);
+            color: white;
+            padding: 4rem 2rem;
+        }
+
+        .cta-section-content {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .cta-section h3 {
+            color: var(--secondary-color);
+            font-size: 1.25rem;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section p {
+            color: rgba(255,255,255,0.9);
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 1rem;
+        }
+
+        .cta-section a {
+            color: white;
+        }
+
+        .cta-section .ausschluss {
+            margin-top: 1.5rem;
+        }
+
+        .cta-section .ausschluss h3 {
+            color: rgba(255,255,255,0.6);
+            font-size: 1rem;
+        }
+
+        .cta-section .ausschluss p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+        }
+
+        .cta-email {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 2px;
+            transition: color 0.3s;
+        }
+
+        .cta-email:hover {
+            color: var(--secondary-color);
+        }
+
         footer {
             background: var(--primary-color);
-            color: white;
+            color: rgba(255,255,255,0.6);
             text-align: center;
             padding: 2rem;
-            margin-top: 4rem;
+            font-size: 0.9rem;
         }
 
         @media (max-width: 968px) {
@@ -338,10 +433,12 @@
                 text-align: center;
             }
 
-            .leistungen-list {
-                text-align: left;
-                max-width: 500px;
-                margin: 0 auto 1.5rem;
+            .expertise-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .cta-section-content {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -360,14 +457,15 @@
                 align-items: center;
             }
 
-            .skill-list {
-                columns: 1;
+            .skills-grid,
+            .projects {
+                grid-template-columns: 1fr;
             }
         }
     </style>
 </head>
 <body>
-<!-- Navbar bleibt gleich -->
+
 <nav class="navbar">
     <div class="navbar-content">
         <a href="#" class="nav-logo">
@@ -375,20 +473,20 @@
             <span>Philipp Geers</span>
         </a>
         <div class="nav-links">
-            <a href="#expertise">Expertise</a>
-            <a href="#projekte">Projekte</a>
-            <a href="#technologien">Technologien</a>
+            <a href="#situationen">Situationen</a>
+            <a href="#prinzipien">Prinzipien</a>
+            <a href="#referenzen">Referenzen</a>
             <a href="#kontakt">Kontakt</a>
         </div>
     </div>
 </nav>
 
 <header class="hero">
-    <div class="hero-content" id="kontakt">
+    <div class="hero-content">
         <div class="hero-left">
             <img src="profilepic.png" alt="Philipp Geers" class="profile-image">
             <h1>Philipp Geers</h1>
-            <h2>Senior Cloud Architekt</h2>
+            <h2>Cloud-Architektur, Modernisierung und AI-Integration</h2>
             <div class="contact-info">
                 <a href="mailto:mail@philipp-geers.de">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -407,108 +505,126 @@
             </div>
         </div>
         <div class="hero-right">
-            <h3>Meine Leistungen</h3>
-            <ul class="leistungen-list">
-                <li><strong>AWS Cloud-Architektur</strong><br><span>Cloud-native Lösungen, Migration, Serverless, ECS/EKS, Infrastructure as Code</span></li>
-                <li><strong>Softwarearchitektur</strong><br><span>Microservices, Hexagonal Architecture, Domain Driven Design, API-First</span></li>
-                <li><strong>Backend-Entwicklung</strong><br><span>Java, Kotlin, Spring Boot, Jakarta EE, REST APIs</span></li>
-                <li><strong>DevOps & CI/CD</strong><br><span>AWS CDK, Pulumi, Docker, automatisierte Pipelines</span></li>
-                <li><strong>Technische Konzeption</strong><br><span>Anforderungsanalyse, Event Storming, Architektur-Dokumentation (C4, ARC42)</span></li>
-                <li><strong>Agile Beratung</strong><br><span>Scrum, Coaching, Team- und Projektleitung</span></li>
-            </ul>
+            <h3>Probleme verstehen. Lösungen entwerfen. Ergebnisse liefern.</h3>
+            <p class="hero-text">Neue Plattformen entwickeln, bestehende Systeme modernisieren oder AI-Services integrieren. Von der Fachlichkeit bis zur tragfähigen Architektur.</p>
+            <a href="mailto:mail@philipp-geers.de?subject=Terminanfrage" class="cta-button">Termin vereinbaren</a>
         </div>
     </div>
 </header>
 
-<section id="expertise" class="section">
-    <h2 class="section-title">Expertise</h2>
+<section id="situationen" class="section">
+    <h2 class="section-title">Typische Situationen</h2>
     <div class="expertise-grid">
         <div class="expertise-card">
-            <h3>Cloud & AWS</h3>
-            <ul>
-                <li>🏅 AWS Certified Solutions Architect - Associate (gültig bis Sept. 2028)</li>
-                <li>AWS Solution Architecture</li>
-                <li>Microservices-Architektur</li>
-                <li>Cloud Migration</li>
-                <li>Infrastructure as Code (AWS CDK, Pulumi)</li>
-                <li>Serverless Computing (Lambda, Step Functions)</li>
-                <li>Container-Orchestrierung (ECS, Fargate, EKS)</li>
-            </ul>
+            <h4>Neue Cloud-Lösung aufbauen</h4>
+            <p>Das nächste Produkt soll cloud-native laufen oder ein bestehendes System muss in die Cloud. Intern fehlt die Erfahrung, eine Cloud-Architektur von Grund auf aufzusetzen.</p>
+            <p>Ich entwerfe die Architektur, setze die Infrastruktur mit CDK oder Pulumi auf und stelle sicher, dass sie von Anfang an skaliert und abgesichert ist.</p>
+            <span class="badge">AWS Certified Solutions Architect</span>
         </div>
         <div class="expertise-card">
-            <h3>Software Engineering</h3>
-            <ul>
-                <li>Spring</li>
-                <li>Java EE / Jarkarta EE</li>
-                <li>Clean Code & Clean Architecture</li>
-                <li>Test Driven Development</li>
-                <li>CI/CD & DevOps</li>
-            </ul>
+            <h4>Fachlichkeit in Architektur übersetzen</h4>
+            <p>Die Software bildet die Fachlichkeit nicht richtig ab. Begriffe sind unklar, Zuständigkeiten im Code vermischt, jede Änderung hat unerwartete Seiteneffekte.</p>
+            <p>Mit Event Storming und Domain-Driven Design erarbeite ich zusammen mit Ihrem Team eine Architektur, die zur Fachlichkeit passt.</p>
         </div>
         <div class="expertise-card">
-            <h3>Architektur & Design</h3>
-            <ul>
-                <li>Microservices & Hexagonal Architecture</li>
-                <li>API-First Design</li>
-                <li>Domain Driven Design (DDD)</li>
-                <li>Event Storming</li>
-                <li>C4 Model & ARC42</li>
-                <li>Clean Code & Clean Architecture</li>
-            </ul>
+            <h4>Bestehendes System modernisieren</h4>
+            <p>Das System läuft, aber es bremst. Veraltete Infrastruktur, fehlende Automatisierung, jedes Deployment ein Risiko.</p>
+            <p>Ich analysiere den Ist-Zustand, plane den Umbau und setze ihn schrittweise um, ohne den laufenden Betrieb zu unterbrechen.</p>
         </div>
         <div class="expertise-card">
-            <h3>Zertifizierungen & Qualifikationen</h3>
-            <ul>
-                <li>🏅 AWS Certified Solutions Architect - Associate (Sept. 2025 - Sept. 2028)</li>
-                <li>🏅 Certified Scrum Product Owner® (CSPO)</li>
-                <li>Agile Coach & Scrum Master</li>
-                <li>Requirements Engineering</li>
-                <li>Team- und Projektleitung</li>
-            </ul>
+            <h4>AI in bestehende Systeme bringen</h4>
+            <p>AI-Services sollen in die bestehende Systemlandschaft integriert werden. Die APIs sind verfügbar, aber die Integration in laufende Systeme, Daten-Pipelines und Security-Konzepte erfordert fundierte Architektur-Arbeit.</p>
+            <p>Ich passe die System- und Softwarearchitektur so an, dass AI-Services sauber integriert werden. Von der Datenanbindung über die API-Schicht bis zum Security-Konzept.</p>
         </div>
     </div>
 </section>
 
-<section id="projekte" class="section">
-    <h2 class="section-title">Aktuelle Projekte</h2>
+<section id="prinzipien" class="section">
+    <h2 class="section-title">Prinzipien</h2>
+    <div class="expertise-grid">
+        <div class="expertise-card">
+            <svg class="card-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+            <h4>Fachlichkeit zuerst</h4>
+            <p>Gute Architektur beginnt mit dem Verständnis der Domäne. Event Storming und Domain-Driven Design stehen am Anfang jedes Projekts.</p>
+        </div>
+        <div class="expertise-card">
+            <svg class="card-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+            </svg>
+            <h4>Security by Design</h4>
+            <p>Threat Modeling, Zero Trust und sichere Architektur sind Teil jeder Entscheidung, nicht nachträgliches Add-on.</p>
+        </div>
+        <div class="expertise-card">
+            <svg class="card-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                <polyline points="22 4 12 14.01 9 11.01"></polyline>
+            </svg>
+            <h4>Verantwortung</h4>
+            <p>Wenn ich ein Thema übernehme, trage ich die Verantwortung dafür. Jeder Schritt transparent und dokumentiert.</p>
+        </div>
+        <div class="expertise-card">
+            <svg class="card-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+            </svg>
+            <h4>Auf Augenhöhe</h4>
+            <p>Ich arbeite mit Entscheidern, die Ziele definieren und Zugang zu den relevanten Systemen ermöglichen.</p>
+        </div>
+    </div>
+</section>
+
+<section id="referenzen" class="section">
+    <h2 class="section-title">Referenzen</h2>
     <div class="projects">
         <div class="project-card">
             <div class="project-content">
-                <h3 class="project-title">Enterprise Payment Service</h3>
+                <h3 class="project-title">Payment-System in die Cloud migriert</h3>
+                <p class="project-industry">FinTech / Touristik</p>
                 <div class="project-description">
-                    <p>Modernisierung und Cloud-Migration eines geschäftskritischen Payment Services mit Fokus auf:</p>
-
+                    <p class="referenz-label">Ausgangslage</p>
+                    <p>Ein bestehendes Payment-System musste zügig in die AWS Cloud migriert werden. Laufender Betrieb, enge Timelines, keine Unterbrechung für Endkunden.</p>
+                    <p class="referenz-label">Lösung</p>
+                    <p>Architektur für die Cloud-Migration entworfen und umgesetzt. Skalierbare Microservice-Architektur mit Verschlüsselung, Tokenisierung und Audit-Logging.</p>
+                    <p class="referenz-label">Ergebnis</p>
+                    <p>Migration innerhalb der Timeline abgeschlossen, ohne Betriebsunterbrechung.</p>
                 </div>
                 <div class="technologies-used">
-                    <h4>Eingesetzte Technologien</h4>
                     <div class="tech-list">
                         <span class="tech-tag">AWS</span>
-                        <span class="tech-tag">Java</span>
-                        <span class="tech-tag">Spring Boot / JavaEE</span>
+                        <span class="tech-tag">Spring Boot</span>
                         <span class="tech-tag">Spring Security</span>
-                        <span class="tech-tag">CI/CD</span>
-                        <span class="tech-tag">PCI DSS</span>
-                        <span class="tech-tag">3DS</span>
-                        <span class="tech-tag">Paypal</span>
+                        <span class="tech-tag">OAuth2</span>
+                        <span class="tech-tag">Java</span>
                     </div>
                 </div>
             </div>
         </div>
         <div class="project-card">
             <div class="project-content">
-                <h3 class="project-title">Cloud-Native Backend Platform</h3>
+                <h3 class="project-title">Cloud-Plattform mit Security von Anfang an</h3>
+                <p class="project-industry">FinTech</p>
                 <div class="project-description">
-                    <p>Entwicklung einer Architektur und Feinkonzeption der REST-API mittels Microservices</p>
+                    <p class="referenz-label">Ausgangslage</p>
+                    <p>Neue Plattform, hohe Sicherheitsanforderungen. Authentifizierung, Autorisierung und sichere Deployments mussten von Grund auf gebaut werden.</p>
+                    <p class="referenz-label">Lösung</p>
+                    <p>Microservice-Plattform mit Security by Design aufgebaut. Auth-Konzept mit Cognito und OAuth2. CI/CD-Pipelines mit SAST und automatisierten Security-Scans.</p>
+                    <p class="referenz-label">Ergebnis</p>
+                    <p>Plattform läuft produktiv. Deployments sind automatisiert, reproduzierbar und auditierbar.</p>
                 </div>
                 <div class="technologies-used">
-                    <h4>Eingesetzte Technologien</h4>
                     <div class="tech-list">
-                        <span class="tech-tag">AWS</span>
-                        <span class="tech-tag">Java</span>
-                        <span class="tech-tag">Spring Boot</span>
-                        <span class="tech-tag">Spring Security</span>
                         <span class="tech-tag">AWS CDK</span>
-                        <span class="tech-tag">CI/CD</span>
+                        <span class="tech-tag">Cognito</span>
+                        <span class="tech-tag">DevSecOps</span>
+                        <span class="tech-tag">Kotlin</span>
+                        <span class="tech-tag">Spring Boot</span>
+                        <span class="tech-tag">Docker</span>
                     </div>
                 </div>
             </div>
@@ -516,53 +632,19 @@
     </div>
 </section>
 
-<section id="technologien" class="section">
-    <h2 class="section-title">Technologie-Stack</h2>
-    <div class="skills-grid">
-        <div class="skill-category">
-            <h3>Core Technologies</h3>
-            <ul class="skill-list">
-                <li>Java (sehr gut)</li>
-                <li>Kotlin (gut)</li>
-                <li>TypeScript (gut)</li>
-                <li>Spring & Spring Boot</li>
-                <li>Jakarta EE</li>
-                <li>Angular & React</li>
-                <li>Docker & Containerization</li>
-                <li>AWS Services</li>
-            </ul>
-        </div>
-        <div class="skill-category">
-            <h3>Cloud & DevOps</h3>
-            <ul class="skill-list">
-                <li>AWS (ECS, Fargate, Lambda, EKS)</li>
-                <li>Kubernetes & Container-Orchestrierung</li>
-                <li>CI/CD (Jenkins, AWS CodePipeline)</li>
-                <li>Infrastructure as Code (AWS CDK, Pulumi)</li>
-                <li>Serverless Architecture</li>
-                <li>Monitoring (CloudWatch)</li>
-            </ul>
-        </div>
-        <div class="skill-category">
-            <h3>Datenbanken & Storage</h3>
-            <ul class="skill-list">
-                <li>PostgreSQL</li>
-                <li>MongoDB & DocumentDB</li>
-                <li>DynamoDB</li>
-                <li>MariaDB</li>
-                <li>SQL & NoSQL</li>
-            </ul>
-        </div>
-        <div class="skill-category">
-            <h3>Frameworks & Tools</h3>
-            <ul class="skill-list">
-                <li>Spring Boot & Spring Security</li>
-                <li>OAuth2 & Cognito</li>
-                <li>PlantUML & C4 Model</li>
-                <li>JIRA & Confluence</li>
-                <li>Maven & Gradle</li>
-                <li>Git, GitHub, GitLab</li>
-            </ul>
+<section class="cta-section" id="kontakt">
+    <div class="cta-section-content" style="grid-template-columns: 1fr;">
+        <div>
+            <h3>Gespräch vereinbaren</h3>
+            <p>Lassen Sie uns in einem kurzen Gespräch klären, ob und wie ich unterstützen kann.</p>
+            <a href="mailto:mail@philipp-geers.de?subject=Terminanfrage" class="cta-button">Termin vereinbaren</a>
         </div>
     </div>
 </section>
+
+<footer>
+    &copy; 2025 Philipp Geers
+</footer>
+
+</body>
+</html>
