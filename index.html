@@ -300,6 +300,10 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
+        .project-card--featured {
+            grid-column: 1 / -1;
+        }
+
         .project-content {
             padding: 1.5rem;
         }
@@ -639,6 +643,20 @@
 <section id="referenzen" class="section">
     <h2 class="section-title">Referenzen</h2>
     <div class="projects">
+        <div class="project-card project-card--featured">
+            <div class="project-content">
+                <h3 class="project-title">Cloud-native Microservice-Plattform für die Logistik</h3>
+                <p class="project-industry">Logistik</p>
+                <div class="project-description">
+                    <p class="referenz-label">Ausgangslage</p>
+                    <p>Ein großer deutscher Logistikdienstleister modernisiert seine technische Plattform. Die bestehende Architektur muss cloud-native neu aufgebaut und evolutionär weiterentwickelt werden.</p>
+                    <p class="referenz-label">Lösung</p>
+                    <p>Cloud-native Microservice-Architektur mit Domain-Driven Design konzipiert. Teams zur technischen Architektur beraten, zentrale Komponenten mit Kotlin, Spring Boot und React implementiert. CI/CD-Pipelines mit GitLab CI, Docker und OpenShift aufgebaut und optimiert.</p>
+                    <p class="referenz-label">Ergebnis</p>
+                    <p>Weitgehend automatisierter, stabiler Anwendungsbetrieb. Architekturentscheidungen und Prozesse standardisiert, technischer Wissensaustausch im Projekt etabliert.</p>
+                </div>
+            </div>
+        </div>
         <div class="project-card">
             <div class="project-content">
                 <h3 class="project-title">Payment-System in die Cloud migriert</h3>
@@ -681,7 +699,7 @@
 </section>
 
 <footer>
-    &copy; 2025 Philipp Geers &nbsp;·&nbsp; <a href="impressum.html" style="color: rgba(255,255,255,0.6);">Impressum</a>
+    &copy; 2026 Philipp Geers &nbsp;·&nbsp; <a href="impressum.html" style="color: rgba(255,255,255,0.6);">Impressum</a>
 </footer>
 
 </body>
